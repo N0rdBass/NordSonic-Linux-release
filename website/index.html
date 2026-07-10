@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NordSonic - Modern loudspeaker enclosure design and analysis suite. High-accuracy simulation, automated cutting lists, and precision box design.">
+    <title>NordSonic - Loudspeaker Enclosure Design & Simulation Suite</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="main-header" class="glass-header">
+        <div class="container header-container">
+            <a href="#" class="logo" id="nav-logo" style="display: flex; align-items: center; gap: 10px;">
+                <img src="logo.png" alt="NordSonic Icon" style="width: 28px; height: 28px; border-radius: 6px;">
+                <span><span class="logo-accent">Nord</span>Sonic</span>
+            </a>
+            <nav class="nav-links" id="main-nav">
+                <a href="#features" class="nav-item">Features</a>
+                <a href="#gallery" class="nav-item">Gallery</a>
+                <a href="#pricing" class="nav-item">Pricing</a>
+                <a href="#download" class="nav-item">Download</a>
+                <a href="#faq" class="nav-item">FAQ</a>
+                <a href="#download" class="btn btn-primary btn-sm" id="nav-cta">Get Free Beta</a>
+            </nav>
+            <button class="mobile-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav-menu">
+        <a href="#features" class="mobile-nav-item">Features</a>
+        <a href="#gallery" class="mobile-nav-item">Gallery</a>
+        <a href="#pricing" class="mobile-nav-item">Pricing</a>
+        <a href="#download" class="mobile-nav-item">Download</a>
+        <a href="#faq" class="mobile-nav-item">FAQ</a>
+        <a href="#download" class="btn btn-primary" id="mobile-nav-cta">Get Free Beta</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge" id="hero-badge" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.2); background: rgba(245, 158, 11, 0.05);">
+                    <span class="badge-dot" style="background-color: #fbbf24; box-shadow: 0 0 8px rgba(245, 158, 11, 0.4);"></span> Open Beta Coming Soon
+                </div>
+                <h1 class="hero-title" id="hero-heading">
+                    Precision Acoustics <br>
+                    <span class="gradient-text">For the Modern Builder</span>
+                </h1>
+                <p class="hero-subtitle">
+                    NordSonic is a professional-grade loudspeaker enclosure design and analysis suite. Simulate acoustic responses, calculate automatic cutting lists, and run physical fit-checks instantly.
+                </p>
+                <div class="hero-actions">
+                    <a href="#download" class="btn btn-primary btn-lg" id="hero-primary-cta">
+                        <i class="fa-solid fa-download"></i> Download Free Beta
+                    </a>
+                    <a href="#features" class="btn btn-secondary btn-lg" id="hero-secondary-cta">
+                        Explore Features
+                    </a>
+                </div>
+                <div class="hero-meta-info">
+                    <span><i class="fa-brands fa-windows"></i> Windows 10/11</span>
+                    <span class="divider"></span>
+                    <span><i class="fa-brands fa-linux"></i> Linux (Ubuntu / Fedora)</span>
+                </div>
+            </div>
+            
+            <!-- Dashboard Mockup (Visual Highlight) -->
+            <div class="hero-visual">
+                <div class="screenshot-wrapper glass-card" id="app-screenshot-container">
+                    <img src="screenshot.png" alt="NordSonic Speaker Design Tool Interface" class="app-screenshot" id="app-screenshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Built for Precision, Designed for Speed</h2>
+                <p class="section-subtitle">Ditch outdated simulators and spreadsheets. NordSonic merges acoustic science with structural design into one unified fluid workspace.</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card glass-card" id="feat-simulation">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-area"></i></div>
+                    <h3 class="feature-title">Acoustic Simulation</h3>
+                    <p class="feature-text">High-accuracy physics modeling for Sealed, Vented (Bass Reflex), Passive Radiator, and 4th Order Bandpass (BP4) enclosures using Thiele/Small equations.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card glass-card" id="feat-geometry">
+                    <div class="feature-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                    <h3 class="feature-title">Auto-Solver & Cutting Lists</h3>
+                    <p class="feature-text">Input your target volume, and NordSonic immediately designs the cabinet panels. Supports double baffles, internal braces, and wedge-angled designs with bevel calculations.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card glass-card" id="feat-safety">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="feature-title">Physical Fit Checks</h3>
+                    <p class="feature-text">Real-time warning notifications for physical driver magnet collisions, basket depth bounds, and acoustic port opening blockages (minimum 1x diameter spacing).</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card glass-card" id="feat-ports">
+                    <div class="feature-icon"><i class="fa-solid fa-wind"></i></div>
+                    <h3 class="feature-title">Advanced Port Engineering</h3>
+                    <p class="feature-text">Model straight slot and round ports, or design 90° bent ports. Includes precise velocity chuffing analysis and Flare-it compliant safety margins.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card glass-card" id="feat-calculators">
+                    <div class="feature-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <h3 class="feature-title">All-in-One Audio Toolkit</h3>
+                    <p class="feature-text">Includes Ohm's Law solvers, series/parallel speaker wiring impedance animators, wire sizing estimators (based on current/length), and db/SPL comparisons.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card glass-card" id="feat-tone">
+                    <div class="feature-icon"><i class="fa-solid fa-wave-square"></i></div>
+                    <h3 class="feature-title">Built-in Tone Generator</h3>
+                    <p class="feature-text">Test your constructed cabinets directly from the application. Generate sine wave test sweeps to check for panel rattles, port noise, and air leaks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">A Look Inside the Software</h2>
+                <p class="section-subtitle">Explore the high-fidelity features and interface layouts built to streamline your loudspeaker design process.</p>
+            </div>
+            
+            <div class="gallery-container glass-card" id="app-gallery">
+                <div class="gallery-viewer">
+                    <button class="gallery-arrow prev" id="gallery-prev" aria-label="Previous screenshot">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div class="gallery-slide-container">
+                        <img src="screenshot1.png" alt="NordSonic Interface Screenshot 1" class="gallery-slide active" id="slide-1">
+                        <img src="screenshot2.png" alt="NordSonic Interface Screenshot 2" class="gallery-slide" id="slide-2">
+                        <img src="screenshot3.png" alt="NordSonic Interface Screenshot 3" class="gallery-slide" id="slide-3">
+                        <img src="screenshot4.png" alt="NordSonic Interface Screenshot 4" class="gallery-slide" id="slide-4">
+                        <img src="screenshot5.png" alt="NordSonic Interface Screenshot 5" class="gallery-slide" id="slide-5">
+                        <img src="screenshot6.png" alt="NordSonic Interface Screenshot 6" class="gallery-slide" id="slide-6">
+                    </div>
+                    <button class="gallery-arrow next" id="gallery-next" aria-label="Next screenshot">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Thumbnails -->
+                <div class="gallery-thumbnails">
+                    <img src="screenshot1.png" alt="Thumbnail 1" class="gallery-thumb active" data-slide-index="0">
+                    <img src="screenshot2.png" alt="Thumbnail 2" class="gallery-thumb" data-slide-index="1">
+                    <img src="screenshot3.png" alt="Thumbnail 3" class="gallery-thumb" data-slide-index="2">
+                    <img src="screenshot4.png" alt="Thumbnail 4" class="gallery-thumb" data-slide-index="3">
+                    <img src="screenshot5.png" alt="Thumbnail 5" class="gallery-thumb" data-slide-index="4">
+                    <img src="screenshot6.png" alt="Thumbnail 6" class="gallery-thumb" data-slide-index="5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Transparent, Tiered Editions</h2>
+                <p class="section-subtitle">Pick the right package for your workshop. Get started with the free beta today.</p>
+            </div>
+            
+            <!-- Pricing Toggle Switch -->
+            <div class="pricing-toggle-wrapper">
+                <span class="toggle-label active" id="billing-monthly">Monthly Billing</span>
+                <button class="pricing-toggle-btn" id="pricing-toggle" aria-label="Toggle billing cycle">
+                    <span class="toggle-slider"></span>
+                </button>
+                <span class="toggle-label" id="billing-yearly">Yearly & Lifetime</span>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Basic Tier -->
+                <div class="pricing-card glass-card" id="price-basic">
+                    <div class="card-header">
+                        <h3 class="tier-name">Basic</h3>
+                        <p class="tier-desc">Essential acoustic modeling for DIY enthusiasts.</p>
+                        <div class="tier-price">
+                            <span class="currency">$</span><span class="amount">0</span><span class="period">/ Free</span>
+                        </div>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fa-solid fa-check text-success"></i> Sealed & Vented simulations</li>
+                        <li><i class="fa-solid fa-check text-success"></i> SPL & Cone Excursion charts</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Round & straight slot ports</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Driver parameters database</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Basic wiring & Ohm's calculators</li>
+                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Panel cutting list solver</li>
+                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Passive Radiators & BP4</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#download" class="btn btn-secondary w-full">Download Free Basic</a>
+                    </div>
+                </div>
+                
+                <!-- Home Tier -->
+                <div class="pricing-card glass-card" id="price-home">
+                    <div class="card-header">
+                        <div class="coming-soon-tag">Coming Soon</div>
+                        <h3 class="tier-name">Home</h3>
+                        <p class="tier-desc">Complete automation for serious speaker builders.</p>
+                        <div class="tier-price">
+                            <span class="currency">$</span><span class="amount" id="home-amount" data-monthly-price="10" data-yearly-price="90">10</span><span class="period" id="home-period" data-monthly-period="/ Month" data-yearly-period="/ Year">/ Month</span>
+                        </div>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fa-solid fa-check text-success"></i> <strong>Everything in Basic</strong></li>
+                        <li><i class="fa-solid fa-check text-success"></i> Full panel cutting list calculations</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Passive Radiator simulation</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Gross volume auto-solver</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Impedance & Group Delay charts</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Baffle Step & Room Gain modelling</li>
+                        <li><i class="fa-solid fa-check text-success"></i> "Sweet Spot" volume solver</li>
+                    </ul>
+                    <div class="card-footer">
+                        <button class="btn btn-secondary w-full" style="opacity: 0.6; cursor: not-allowed;" disabled>Coming Soon</button>
+                    </div>
+                </div>
+                
+                <!-- Pro Tier -->
+                <div class="pricing-card glass-card" id="price-pro">
+                    <div class="card-header">
+                        <div class="coming-soon-tag">Coming Soon</div>
+                        <h3 class="tier-name">Pro</h3>
+                        <p class="tier-desc">High-precision systems for custom shops.</p>
+                        <div class="tier-price">
+                            <span class="currency">$</span><span class="amount" id="pro-amount" data-monthly-price="49" data-yearly-price="299">49</span><span class="period" id="pro-period" data-monthly-period="/ Month" data-yearly-period="/ Lifetime">/ Month</span>
+                        </div>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fa-solid fa-check text-success"></i> <strong>Everything in Home</strong></li>
+                        <li><i class="fa-solid fa-check text-success"></i> Wedge enclosures & bevel guides</li>
+                        <li><i class="fa-solid fa-check text-success"></i> 4th Order Bandpass (BP4)</li>
+                        <li><i class="fa-solid fa-check text-success"></i> 90-degree bent port solver</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Multi-chamber fit collision checks</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Cabin gain (car audio) settings</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Branded PDF Report Exports</li>
+                    </ul>
+                    <div class="card-footer">
+                        <button class="btn btn-secondary w-full" style="opacity: 0.6; cursor: not-allowed;" disabled>Coming Soon</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-note">
+                <p>All paid tiers include a <strong>7-day free trial</strong> (no credit card required) and support a <strong>72-hour offline grace period</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <div class="download-box glass-card">
+                <h2 class="download-title">Download Client Packages</h2>
+                <p class="download-subtitle">Choose the client package you want to download. You can download the permanently free Basic Edition or get full trial access using the Open Beta client.</p>
+                
+                <div class="download-options-container">
+                    <!-- Basic Edition Card -->
+                    <div class="download-option-card" id="dl-basic-edition">
+                        <div class="download-option-header">
+                            <h3 class="download-option-title">
+                                <i class="fa-solid fa-cube text-primary"></i> Basic Edition (Free)
+                            </h3>
+                            <p class="download-option-desc">Permanently free client. Only the Basic simulation tier features are enabled (no Home or Pro features).</p>
+                        </div>
+                        <div class="download-buttons-stack">
+                            <a href="#" class="platform-download-item" id="btn-dl-basic-win">
+                                <div class="platform-info">
+                                    <i class="fa-brands fa-windows"></i>
+                                    <div class="platform-details">
+                                        <span class="platform-name">Windows 10 / 11 Installer</span>
+                                        <span class="platform-meta">Size: ~125 MB · Version: 0.1.24</span>
+                                    </div>
+                                </div>
+                                <span class="btn btn-secondary btn-sm"><i class="fa-solid fa-download"></i> Download</span>
+                            </a>
+                            <a href="https://mega.nz/file/lNVFQQRY#IJDdot07EpsIepMuvy-db-stciS6TSlbsWt9iWrqjdQ" class="platform-download-item" id="btn-dl-basic-linux">
+                                <div class="platform-info">
+                                    <i class="fa-brands fa-linux"></i>
+                                    <div class="platform-details">
+                                        <span class="platform-name">Linux Native Standalone</span>
+                                        <span class="platform-meta">Size: ~127 MB · Version: 0.1.24</span>
+                                    </div>
+                                </div>
+                                <span class="btn btn-secondary btn-sm"><i class="fa-solid fa-download"></i> Download</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Open Beta Card -->
+                    <div class="download-option-card" id="dl-open-beta">
+                        <div class="download-option-header">
+                            <h3 class="download-option-title">
+                                <i class="fa-solid fa-flask text-accent"></i> Open Beta Client <span class="coming-soon-tag" style="margin-bottom: 0; margin-left: 8px; font-size: 0.6rem; padding: 2px 8px;">Coming Soon</span>
+                            </h3>
+                            <p class="download-option-desc">Testing client with all features (Basic, Home, and Pro) temporarily unlocked. Requires no credit card or account setup.</p>
+                        </div>
+                        <div class="download-buttons-stack">
+                            <button class="platform-download-item" style="opacity: 0.6; cursor: not-allowed; width: 100%; text-align: left; background: rgba(255, 255, 255, 0.01);" disabled>
+                                <div class="platform-info">
+                                    <i class="fa-brands fa-windows"></i>
+                                    <div class="platform-details">
+                                        <span class="platform-name">Windows 10 / 11 Installer</span>
+                                        <span class="platform-meta">Coming Soon</span>
+                                    </div>
+                                </div>
+                                <span class="btn btn-secondary btn-sm" disabled>Coming Soon</span>
+                            </button>
+                            <button class="platform-download-item" style="opacity: 0.6; cursor: not-allowed; width: 100%; text-align: left; background: rgba(255, 255, 255, 0.01);" disabled>
+                                <div class="platform-info">
+                                    <i class="fa-brands fa-linux"></i>
+                                    <div class="platform-details">
+                                        <span class="platform-name">Linux Native Standalone</span>
+                                        <span class="platform-meta">Coming Soon</span>
+                                    </div>
+                                </div>
+                                <span class="btn btn-secondary btn-sm" disabled>Coming Soon</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Start terminal command -->
+                <div class="linux-terminal-guide">
+                    <h4><i class="fa-solid fa-terminal"></i> Quick Launch Command (Linux)</h4>
+                    <p>Once downloaded, make the launcher executable and run from your terminal:</p>
+                    <div class="terminal-code">
+                        <code>chmod +x nordsonic_launcher.sh && ./nordsonic_launcher.sh</code>
+                        <button class="copy-btn" id="btn-copy-cmd" aria-label="Copy command">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container faq-container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Have questions about the beta, licensing, or compatibility? We have answers.</p>
+            </div>
+            
+            <div class="faq-accordion-list">
+                <!-- FAQ 1 -->
+                <div class="faq-item glass-card" id="faq-q1">
+                    <button class="faq-question">
+                        <span>How does the open beta license access work?</span>
+                        <i class="fa-solid fa-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>During the Open Beta phase, all features are fully available to test. The application generates a secure 4-factor local hardware fingerprint (binding your CPU ID, CPU arch, hostname, and MAC address) to authorize a free trial period. You do not need to enter payment details to test the software.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item glass-card" id="faq-q2">
+                    <button class="faq-question">
+                        <span>Can I use NordSonic offline in my workshop?</span>
+                        <i class="fa-solid fa-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. NordSonic stores license validation locally using AES/Fernet encryption in <code>~/.nordsonic/license.dat</code>. You can run the application offline for up to 72 hours before it requests a brief connection to validate license status online with LemonSqueezy.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item glass-card" id="faq-q3">
+                    <button class="faq-question">
+                        <span>Does NordSonic run natively on macOS?</span>
+                        <i class="fa-solid fa-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Currently, native binaries are provided for Windows 10/11 and Linux (Ubuntu 22.04+ / Fedora 40+). A native macOS build is planned for the near future. Under Linux, the GUI uses PySide6/Qt platform plugins running natively without compatibility layers.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item glass-card" id="faq-q4">
+                    <button class="faq-question">
+                        <span>How do I import driver libraries?</span>
+                        <i class="fa-solid fa-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can import bulk parameter configurations using standard comma-separated value (.csv) or spreadsheet (.xlsx) formats in the **Drivers** tab. A default library template (<code>NordSonic_Driver_Library.csv</code>) is automatically imported upon first startup to give you a library of standard drivers right away.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <span class="logo-accent">Nord</span>Sonic
+            </div>
+            <div class="footer-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#download">Download</a>
+                <a href="https://github.com/1n54n17y/NordSonic" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 NordSonic. All rights reserved. <br>
+                Licensed under the GPL v3 License. Made for speaker designers worldwide.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
