@@ -48,7 +48,7 @@ Once downloaded, open your terminal in the directory where the file was saved an
 
 1. By default, downloading the client launches the app in the free **Basic Edition** (advanced calculators, dimensions panel lists, passive radiator, and bandpass simulations are locked).
 2. To unlock the Open Beta (full Home and Pro privileges) for 60 days, select **File > Activate License...** from the top menu bar.
-3. Enter one of the **1,000 Open Beta activation keys** (format: `NS-BETA-XXXX-YYYY`).
+3. Enter the **Open Beta activation keys** (format: `NS-BETA-XXXX-YYYY`).
 
 *To request a testing key, please reach out directly through our release announcement threads!*
 
