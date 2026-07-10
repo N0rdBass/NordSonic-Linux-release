@@ -1,7 +1,7 @@
-# NordSonic Speaker Tool
+# NordSonic Speaker Tool - Linux Standalone Release
 
 <p align="center">
-  <img src="assets/nordsonic_icon.png" alt="NordSonic Logo" width="120" height="120">
+  <img src="website/logo.png" alt="NordSonic Logo" width="120" height="120">
 </p>
 
 <h3 align="center">NordSonic</h3>
@@ -11,123 +11,57 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/1n54n17y/NordSonic/actions"><img src="https://img.shields.io/github/actions/workflow/status/1n54n17y/NordSonic/pages.yml?branch=main&label=deployment" alt="Deployment Status"></a>
   <img src="https://img.shields.io/badge/version-0.1.24-blue.svg" alt="Version 0.1.24">
   <img src="https://img.shields.io/badge/license-GPLv3-green.svg" alt="License GPL v3">
-  <img src="https://img.shields.io/badge/platforms-Windows%20%7C%20Linux-orange.svg" alt="Platforms Windows | Linux">
+  <img src="https://img.shields.io/badge/platform-Linux%20x86__64-orange.svg" alt="Platform Linux x86_64">
 </p>
 
 ---
 
-## 🚀 What is NordSonic?
+## 💾 Download Linux Standalone
 
-NordSonic is a professional-grade loudspeaker design tool engineered to merge **acoustic simulation** with **structural cabinet design** into a single fluid workspace. 
+The compiled standalone executable binary is hosted securely on MEGA. No installation or Python setup is required.
 
-If you are tired of switching between outdated websites, legacy software from the late 90s (like WinISD or Hornresp), and complex geometry sheets to design one speaker cabinet—NordSonic is built for you.
+👉 **[Download Standalone Linux Client (127 MB)](https://mega.nz/file/lNVFQQRY#IJDdot07EpsIepMuvy-db-stciS6TSlbsWt9iWrqjdQ)**
+
+---
+
+## 🚀 How to Launch the Software
+
+Once downloaded, open your terminal in the directory where the file was saved and run:
+
+1. **Make the binary executable:**
+   ```bash
+   chmod +x NordSonic
+   ```
+
+2. **Run the application:**
+   ```bash
+   ./NordSonic
+   ```
+
+*Note: If you run into cursor or display rendering warnings, ensure `xcb` libraries are installed on your Linux system (`sudo apt install libxcb-cursor0`).*
+
+---
+
+## 🔑 How to Unlock the Open Beta
+
+1. By default, downloading the client launches the app in the free **Basic Edition** (advanced calculators, dimensions panel lists, passive radiator, and bandpass simulations are locked).
+2. To unlock the Open Beta (full Home and Pro privileges) for 60 days, select **File > Activate License...** from the top menu bar.
+3. Enter one of the **1,000 Open Beta activation keys** (format: `NS-BETA-XXXX-YYYY`).
+
+*To request a testing key, please reach out directly through our release announcement threads!*
 
 ---
 
 ## ✨ Features at a Glance
 
-*   **Acoustic Simulations:** High-accuracy physics modeling for **Sealed**, **Vented (Bass Reflex)**, **Passive Radiator**, and **4th Order Bandpass (BP4)** enclosures using verified Thiele/Small models.
-*   **Structural Geometry Solver:** Input your target volume, and NordSonic immediately designs the cabinet panels, producing a complete **Cutting List** (supporting double front baffles, shelf bracings, and angled wedge cabinets).
-*   **Physical Fit & Interference Checks:** Real-time warning feedback check for driver magnet collisions, basket clearance bounds, and port opening obstructions.
-*   **Advanced Port Engineering:** Slot and round port designs, including 90° bent ports, chuffing velocity analysis, and Flare-it compliant margins.
-*   **Integrated Toolkit:** Ohm's Law solvers, wire sizing calculators, logarithmic db/SPL estimators, and parallel/series wiring impedance animators.
-*   **Built-in Tone Generator:** Sweep test frequencies right from the application to check for cabinet panel rattles or port chuffing.
-
----
-
-## 📦 Tiered Editions
-
-| Edition | Price | Key Capabilities |
-| :--- | :--- | :--- |
-| **Basic** | **Free** | Sealed/Vented simulation, SPL & cone excursion charts, driver database, wiring & Ohm's calculators. |
-| **Home** *(Coming Soon)* | **$10/mo** or **$90/yr** | Panel cutting lists, Passive Radiator support, Baffle Step Correction, Room Gain modeling. |
-| **Pro** *(Coming Soon)* | **$49/mo** or **$299/life** | Wedge enclosures, BP4 bandpass support, 90° bent ports, and Branded PDF Exports. |
-
----
-
-## 🖥️ Graphical Interface Preview
-
-The native application features a fully responsive, DPI-aware interface with a built-in light/dark theme toggle:
-
-<p align="center">
-  <img src="website/screenshot1.png" alt="NordSonic Application Interface" width="700">
-</p>
-
----
-
-## 🛠️ Quick Installation
-
-### Linux (Ubuntu 22.04 / 24.04)
-
-1. **Install system dependencies:**
-   ```bash
-   sudo apt update
-   sudo apt install python3 python3-pip python3-venv xcb-util-cursor libxcb-cursor0 -y
-   ```
-
-2. **Clone the repository and set up a virtual environment:**
-   ```bash
-   git clone https://github.com/1n54n17y/NordSonic.git
-   cd NordSonic
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
-
-3. **Install the package in editable mode:**
-   ```bash
-   pip install -e .
-   ```
-
-4. **Launch the application:**
-   ```bash
-   nordsonic gui
-   ```
-
-*(For Fedora installation workarounds or Windows environment setups, please check the detailed [docs/INSTALL.md](docs/INSTALL.md) guide).*
-
----
-
-## ⌨️ CLI Interface Usage
-
-NordSonic also provides a powerful Command Line Interface for quick simulations and database queries.
-
-```bash
-# Display top-level CLI commands
-nordsonic --help
-
-# Query all drivers in the local database
-nordsonic driver list
-
-# Simulate a vented enclosure for a specific driver
-nordsonic simulate vented <driver_id> --volume 60 --fb 35
-```
-
-For more CLI examples, check out [docs/COMMANDS.md](docs/COMMANDS.md).
-
----
-
-## 🧑‍💻 Developer Guide
-
-### Running Tests
-We maintain a comprehensive suite of E2E, unit, and scenario tests with over 80+ test cases. Run tests using `pytest`:
-```bash
-pytest tests/
-```
-
-### Compilation & Binary Builds
-You can compile NordSonic into a standalone native binary for distribution using the build scripts in the `scripts` directory:
-
-*   **Public Release (Nuitka compilation):**
-    ```bash
-    bash scripts/build_public_release.sh
-    ```
-*   **Inner Circle Release (PyInstaller compilation):**
-    ```bash
-    pyinstaller scripts/nordsonic_inner_circle.spec
-    ```
+*   **Acoustic Simulations:** High-accuracy physics modeling for **Sealed**, **Vented (Bass Reflex)**, **Passive Radiator**, and **4th Order Bandpass (BP4)** enclosures.
+*   **Structural Geometry Solver:** Auto-calculate panel cutting lists supporting double-front baffles, shelf window-cutout bracings, and angled wedge cabinets.
+*   **Physical Fit & Interference Checks:** Real-time feedback warnings for driver magnet collisions, basket depths, and port spacing clearances.
+*   **Advanced Port Flare Design:** Model round, straight slot, or 90° bent ports with velocity chuffing analysis and Flare-it compliant safety margins.
+*   **Acoustic Toolkit:** Series/parallel wiring animators, Ohm's law calculators, db/SPL logarithmic converters, and wire-gauge estimators.
+*   **Built-in Tone Generator:** Output test frequencies directly from the app to test cabinet rattle or port noise.
 
 ---
 
