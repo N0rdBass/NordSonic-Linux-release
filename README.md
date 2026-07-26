@@ -20,7 +20,7 @@
 
 ## 💾 Download Linux Standalone
 
-The compiled standalone executable binary is hosted securely on MEGA. No installation or Python setup is required.
+The compiled standalone executable binary is hosted securely on MEGA.
 
 👉 **[Download Standalone Linux Client (127 MB)](https://mega.nz/file/lNVFQQRY#IJDdot07EpsIepMuvy-db-stciS6TSlbsWt9iWrqjdQ)**
 
