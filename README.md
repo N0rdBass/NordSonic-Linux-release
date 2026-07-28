@@ -18,11 +18,11 @@
 
 ---
 
-## 💾 Download Linux Standalone
+## 💾 Download
 
 The compiled standalone executable binary is hosted securely on MEGA.
 
-👉 **[Download Standalone Linux Client (127 MB)](https://mega.nz/file/lNVFQQRY#IJDdot07EpsIepMuvy-db-stciS6TSlbsWt9iWrqjdQ)**
+👉 **[Download (127 MB)]([https://nordbassaudio.com/#download])**
 
 ---
 
