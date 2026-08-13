@@ -1,7 +1,7 @@
 # Solvex Audio - Loudspeaker Design & Simulation Suite
 
 <p align="center">
-  <img src="website/logo.png" alt="Solvex Audio Logo" width="120" height="120">
+  <img src="logo.png" alt="Solvex Audio Logo" width="120" height="120">
 </p>
 
 <h3 align="center">Solvex Audio</h3>
