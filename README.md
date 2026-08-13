@@ -44,8 +44,9 @@ Download pre-compiled standalone releases directly for your operating system:
 2. Double-click `Solvex Audio.exe` to launch. No Python or installation required!
 
 ### 🍏 macOS (Apple Silicon & Intel)
-1. Download `Solvex_Audio_macOS.zip` and extract it.
-2. Double-click `Solvex Audio` to launch.
+1. Right-Click (or Control + Click) on Solvex Audio.
+2. Select Open from the menu.
+3. Click Open in the confirmation box that pops up.
 
 ---
 
